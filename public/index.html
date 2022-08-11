@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Daniel Aquilino Ndong" />
+  <title>LAYOUT TAILWIND</title>
+  <meta name="description" content="Practica de Tailwind | leccion 16 | CSS | Master Fullstack">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!-- A fin de mantener el documento lo más limpio posible he trasladado la mayor parte de las clases al archivo 'tailwind.css' usando la directiva '@apply' -->
+
+<body>
+  <main class="h-full md:h-screen">
+    <!-- Layout de la página -->
+    <section class="layout">
+      <!-- Contenedor del Layout -->
+      <section class="card">
+        <!-- Flex-image -->
+        <div class="card__image">
+          <img src="assets/img/camisas.png" alt="Camisetas" class="image__classes">
+        </div>
+        <!-- Flex-Properties -->
+        <article class="card__properties">
+          <!-- Properties-Header -->
+          <header class="flex justify-between">
+            <div>
+              <h2 class="inline md:block text-md md:text-lg lg:text-2xl"><strong>Basic Tee 6-Pack</strong></h2>
+              <span class="text-sm md:text-xl lg:text-2xl">$192</span>
+            </div>
+            <!-- Boton cerrar -->
+            <div class="hidden md:block">
+              <i class=" fa-solid fa-xmark fa-lg text-gray-300 hover:text-gray-200 active:text-gray-400"></i>
+            </div>
+          </header>
+          <div class="sm:flex sm:justify-between sm:gap-9 left-3 md:left-9 md:block">
+            <!-- Flex-container -->
+            <div>
+              <!-- Properties-Rating -->
+              <section class="flex align-items-center flex-col md:flex-row gap-3 py-5">
+                <div class="flex flex-wrap gap-3">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star text-gray-300"></i>
+                </div>
+                <div class="before:content-['117'] before:ml-0.5 before:text-blue-700 text-blue-700 font-medium">
+                  <span>reviews</span>
+                </div>
+              </section>
+              <!-- Properties-Colors -->
+              <section class="flex flex-col gap-2 mb-5">
+                <header>
+                  <h3>Color</h3>
+                </header>
+                <div class="flex flex-wrap gap-2">
+                  <!-- Circle -->
+                  <a href="#white">
+                    <div id="white" class="circle bg-slate-50 target:outline-gray-500">
+                      </label>
+                    </div>
+                  </a>
+                  <!-- Circle -->
+                  <a href="#gray">
+                    <div id="gray" class="circle bg-zinc-300 target:outline-zinc-500">
+                    </div>
+                  </a>
+                  <!-- Circle -->
+                  <a href="#black">
+                    <div id="black" class="circle bg-slate-900 target:outline  target:outline-slate-300">
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+            <!-- Properties-Sizes -->
+            <section class="w-full">
+              <header class="flex justify-between">
+                <h3>Size</h3>
+                <a href="#" class="block font-medium text-blue-700">Size guide</a>
+              </header>
+              <!-- Properties-Sizes-Options -->
+              <div class="grid grid-cols-3 md:grid-cols-daniColumns md:grid-rows-daniRows gap-5 py-3 ">
+                <!-- Botones de la seccion 'sizes' -->
+                <button class="button__item">
+                  XXS</button>
+                <button class="button__item">
+                  XS</button>
+                <button class="button__item">
+                  S</button>
+                <button class="button__item">
+                  M</button>
+                <button class="button__item">
+                  L</button>
+                <button class="button__item">
+                  XL</button>
+                <button class="button__item">
+                  XXL</button>
+                <button class="button__item bg-gray-200 outline  outline-gray-300 text-gray-400 relative gap-1">
+                  <i class="fas fa-lock fa-md"></i>
+                  XXXL</button>
+              </div>
+            </section>
+          </div>
+          <!-- Boton 'add to bag' -->
+          <div class="w-full sm:mt-28 md:mt-0 rounded-md bg-indigo-600 py-3  text-center text-neutral-100 mb-2 sm:mb-0">
+            <span>Add to bag</span>
+          </div>
+          <!-- Fin del boton -->
+        </article>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>

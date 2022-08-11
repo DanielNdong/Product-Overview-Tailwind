@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+
+
+.layout {
+    @apply bg-slate-500 w-full h-full px-16 py-6 sm:px-24 sm:py-16;
+}
+
+.card {
+    @apply bg-zinc-50 p-9 h-full w-auto sm:h-full  transition duration-500 ease-in-out hover:shadow-none md:hover:shadow-2xl md:hover:transition md:hover:duration-700 md:hover:ease-in-out md:hover:shadow-zinc-900 md:flex md:gap-9;
+}
+
+.card__image {
+    @apply h-64 w-full bg-neutral-200 rounded-md mb-2 md:w-2/4 md:h-auto  lg:h-auto lg:w-2/5 shrink-0 grow flex justify-center items-center;
+}
+
+.image__classes {
+    @apply w-full h-full   object-cover rounded-md;
+}
+
+.card__properties {
+    @apply h-auto sm:h-auto md:flex md:flex-col md:justify-between md:w-2/4 lg:w-5/6 md:h-full shrink grow-0;
+}
+
+.circle {
+    @apply h-9 w-10 sm:h-12 sm:w-12 border-2 rounded-full target:outline outline-2 overflow-hidden; 
+}
+
+.button__item {
+    @apply border border-slate-300 shadow-md shadow-slate-300 rounded-md flex justify-center items-center motion-safe:hover:-translate-y-1  motion-safe:transition p-2 text-sm sm:text-sm md:text-base lg:text-lg focus:outline-none focus:ring focus:ring-violet-300;
+}
